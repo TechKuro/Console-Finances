@@ -105,3 +105,5 @@ for (var i = 1; i < finances.length; i++) {
 
 }
 var averageChange = totalChange / (totalMonths - 1);
+
+console.log(averageChange);
