@@ -90,7 +90,6 @@ var finances = [
 // Total number of months
 var totalMonths = finances.length;
 
-console.log(totalMonths)
 
 // Net total amount of Profit/Losses
 var netTotal = 0;
@@ -106,7 +105,6 @@ for (var i = 1; i < finances.length; i++) {
 };
 var averageChange = totalChange / (totalMonths - 1);
 
-console.log(averageChange);
 
 // Greatest increase in profits (date and amount)
 var greatestIncrease = {
