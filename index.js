@@ -107,3 +107,15 @@ for (var i = 1; i < finances.length; i++) {
 var averageChange = totalChange / (totalMonths - 1);
 
 console.log(averageChange);
+
+// Greatest increase in profits (date and amount)
+var greatestIncrease = {
+  date: finances[0][0],
+  amount: finances[0][1]
+};
+for (var i = 1; i < finances.length; i++) {
+  if (finances[i][1] - finances[i-1][1] > greatestIncrease.amount) {
+    greatestIncrease.date = finances[i][0];
+    greatestIncrease.amount = finances[i][1] - finances[i-1][1];
+  }
+}
