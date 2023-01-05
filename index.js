@@ -91,3 +91,9 @@ var finances = [
 var totalMonths = finances.length;
 
 console.log(totalMonths)
+
+// Net total amount of Profit/Losses
+var netTotal = 0;
+for (var i = 0; i < finances.length; i++) {
+  netTotal += finances[i][1];
+};
