@@ -119,3 +119,16 @@ for (var i = 1; i < finances.length; i++) {
     greatestIncrease.amount = finances[i][1] - finances[i-1][1];
   }
 }
+
+// Greatest decrease in losses (date and amount)
+var greatestDecrease = {
+  date: finances[0][0],
+  amount: finances[0][1]
+};
+
+for (var i = 1; i < finances.length; i++) {
+  if (finances[i][1] - finances[i-1][1] < greatestDecrease.amount) {
+    greatestDecrease.date = finances[i][0];
+    greatestDecrease.amount = finances[i][1] - finances[i-1][1];
+  }
+}
